@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['readdata_0',['readData',['../class_easy_c.html#a9a3d39be50b348768bc4b5dea3dae01a',1,'EasyC']]],
-  ['readme_2emd_1',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['readregister_2',['readRegister',['../class_easy_c.html#a45bd6c915c1fa0998e273f69ee2d2376',1,'EasyC']]]
+  ['pin_0',['pin',['../class_button_and_l_e_d.html#a5fffe9943b5b0b30b466146e32250bc5',1,'ButtonAndLED']]],
+  ['pwm_1',['pwm',['../class_button_and_l_e_d.html#ad689b1a667590a738d0e046256be12ee',1,'ButtonAndLED']]]
 ];

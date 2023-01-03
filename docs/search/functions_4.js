@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['sendaddress_0',['sendAddress',['../class_easy_c.html#a10aa7df19e8c7bf12cd720b662f317a3',1,'EasyC']]],
-  ['senddata_1',['sendData',['../class_easy_c.html#afe8aa014ae53cad3b0f3c42f59277195',1,'EasyC']]],
-  ['sensor_2',['Sensor',['../class_sensor.html#a2b8ea6b15267f6fa0e263f57a09f6b62',1,'Sensor']]]
+  ['ledoff_0',['ledOff',['../class_button_and_l_e_d.html#ae6577c71d6b27b2d5e1fb0b814881a61',1,'ButtonAndLED']]],
+  ['ledon_1',['ledOn',['../class_button_and_l_e_d.html#a7a7e572e97bb70c3fe1a2abeccfef3fc',1,'ButtonAndLED::ledOn()'],['../class_button_and_l_e_d.html#af7951ad784e0179554b4f0580857ba27',1,'ButtonAndLED::ledOn(byte pwmValue)']]]
 ];
