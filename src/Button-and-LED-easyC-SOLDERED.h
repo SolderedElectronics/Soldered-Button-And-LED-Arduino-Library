@@ -22,14 +22,14 @@ class ButtonAndLED : public EasyC
     void ledOn();
     void ledOn(byte pwmValue);
     void ledOff();
-    bool getBtnState();    
+    bool getBtnState();
 
   protected:
     void initializeNative();
 
   private:
-  int pin;
-  byte pwm = 128;
+    int pin;
+    byte pwm = 128;
 };
 
 #endif
