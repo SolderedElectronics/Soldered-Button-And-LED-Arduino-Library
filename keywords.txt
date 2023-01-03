@@ -1,5 +1,5 @@
 ##################################################
-# Syntax Coloring Map For Obstacle-Sensor-SOLDERED
+# Syntax Coloring Map For Button-&-LED-SOLDERED
 ##################################################
 
 ##################################################
@@ -10,7 +10,10 @@
 # Methods and Functions (KEYWORD2)
 ##################################################
 
-begin	KEYWORD2
+begin	    KEYWORD2
+ledOn       KEYWORD2
+ledOff      KEYWORD2
+getBtnState KEYWORD2
 
 ##################################################
 # Constants (LITERAL1)
