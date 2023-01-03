@@ -41,7 +41,7 @@ void ButtonAndLED::ledOn()
 
 /**
  * @brief                   Function to turn on the LED with PWM value.
- * 
+ *
  * @param _pwmValue         PWM value from 0 to 255.
  */
 void ButtonAndLED::ledOn(byte _pwmValue)
@@ -67,7 +67,7 @@ void ButtonAndLED::ledOff()
 
 /**
  * @brief                   Function to get button state.
- * 
+ *
  * @return                  1 if the button is pressed, 0 if not.
  */
 bool ButtonAndLED::getBtnState()
