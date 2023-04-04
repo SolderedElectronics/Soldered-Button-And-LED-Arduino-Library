@@ -6,15 +6,23 @@
 # Datatypes (KEYWORD1)
 ##################################################
 
+ButtonAndLED	KEYWORD1
+
 ##################################################
 # Methods and Functions (KEYWORD2)
 ##################################################
 
-begin	    KEYWORD2
-ledOn       KEYWORD2
-ledOff      KEYWORD2
-getBtnState KEYWORD2
+begin	KEYWORD2
+ledOn	KEYWORD2
+ledOff	KEYWORD2
+getBtnState	KEYWORD2
 
 ##################################################
 # Constants (LITERAL1)
 ##################################################
+
+BUTTON_IDLE	LITERAL1
+BTN_CLICK	LITERAL1
+BTN_DOUBLE_CLICK	LITERAL1
+BTN_LONG_PRESS	LITERAL1
+BTN_LONG_RELEASE	LITERAL1
