@@ -74,6 +74,6 @@ byte ButtonAndLED::getBtnState()
 {
     byte btn;
     readData(&btn, 1);
-    
+
     return btn;
 }
