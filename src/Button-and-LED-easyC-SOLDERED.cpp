@@ -6,7 +6,7 @@
  *
  *
  * @copyright   GNU General Public License v3.0
- * @authors     Karlo LEksic for soldered.com
+ * @authors     Karlo Leksic for soldered.com
  ***************************************************/
 
 
@@ -70,21 +70,10 @@ void ButtonAndLED::ledOff()
  *
  * @return                  1 if the button is pressed, 0 if not.
  */
-bool ButtonAndLED::getBtnState()
+byte ButtonAndLED::getBtnState()
 {
     byte btn;
-    Wire.requestFrom(0x30, 1);
-    if (Wire.available() == 1)
-    {
-        btn = Wire.read();
-    }
-
-    if (btn == 0)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+    readData(&btn, 1);
+    
+    return btn;
 }

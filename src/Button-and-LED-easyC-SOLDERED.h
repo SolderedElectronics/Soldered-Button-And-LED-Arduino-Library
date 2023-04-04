@@ -15,6 +15,13 @@
 #include "Arduino.h"
 #include "libs/Generic-easyC/easyC.hpp"
 
+// Define states of the button
+#define BUTTON_IDLE      0
+#define BTN_CLICK        1
+#define BTN_DOUBLE_CLICK 2
+#define BTN_LONG_PRESS   3
+#define BTN_LONG_RELEASE 4
+
 class ButtonAndLED : public EasyC
 {
   public:
@@ -22,7 +29,7 @@ class ButtonAndLED : public EasyC
     void ledOn();
     void ledOn(byte pwmValue);
     void ledOff();
-    bool getBtnState();
+    byte getBtnState();
 
   protected:
     void initializeNative();
