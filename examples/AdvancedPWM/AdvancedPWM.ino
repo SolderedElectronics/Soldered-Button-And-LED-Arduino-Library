@@ -1,15 +1,16 @@
 /**
  **************************************************
  *
- * @file        Blink.ino
- * @brief       The basic example of the blinking LED.
- * 
+ * @file        AdvancedPWM.ino
+ * @brief       Example of the fading LED with PWM using a function to send each PWM value.
+ *              If you want to use a built-in fading function, see the BasicPwm example.
+ *
  *              For this example you will need any Dasduino board, a USB-c cable, Button and LED with easyC, and easyC cable. 
  *              Don't have Dasduino? Get it here: https://soldered.com/categories/dasduino-arduino/dasduino-boards/ 
  *              Don't have easyC cable? Get it here: https://soldered.com/categories/easyc-2/easyc-cables-adapters/
  *
  *              Connect Button & LED board to your Dasduino with easyC and upload this example.
- *              You will see the blinking LED.
+ *              You will see the fading LED.
  *
  * @link        solde.red/333182
  *
@@ -37,9 +38,27 @@ void setup()
 
 void loop()
 {
-    myBtnLed.ledOn(); // Turn the LED on
-    delay(1000);      // Delay between turning on and off
+    // Increasing the brightness
+    for (int i = 0; i < 255; ++i)
+    {
+        myBtnLed.ledOn(i); // Set PWM to the LED
+        // NOTE: In the BasicPwm example, you pass this delay value to the function.
+        // Also, the delay value in the for loop below.
+        delay(5); // A little delay only to better see changes
+    }
 
-    myBtnLed.ledOff(); // Turn the LED off
-    delay(1000);       // Delay between turning on and off
+    // Wait a bit before decreasing the PWM value
+    delay(500);
+    // NOTE: In the built-in function to fade (BasicPwm example) 
+    // this delay cannot be configured, it doesn't exist.
+
+    // Decreasing the brightness
+    for (int i = 255; i >= 0; --i)
+    {
+        myBtnLed.ledOn(i); // Set PWM to the LED
+        delay(5);          // A little delay only to better see changes
+    }
+
+    // Wait a bit before increasing the PWM value
+    delay(500);
 }

@@ -15,6 +15,13 @@
 #include "Arduino.h"
 #include "libs/Generic-easyC/easyC.hpp"
 
+// Define all modes of LED
+#define LED_OFF         0
+#define LED_ON          1
+#define LED_PWM         2
+#define LED_FADING      3
+#define LED_ON_AND_HOLD 4
+
 // Define states of the button
 #define BUTTON_IDLE      0
 #define BTN_CLICK        1
@@ -30,13 +37,15 @@ class ButtonAndLED : public EasyC
     void ledOn(byte pwmValue);
     void ledOff();
     byte getBtnState();
+    void ledFading(uint32_t _delay);
+    void turnLedOnAndHold(uint32_t _time);
 
   protected:
     void initializeNative();
 
   private:
+    void sendValues(uint8_t _mode, uint32_t _parameter);
     int pin;
-    byte pwm = 128;
 };
 
 #endif
