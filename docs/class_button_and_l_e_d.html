@@ -96,6 +96,7 @@ $(document).ready(function(){initNavTree('class_button_and_l_e_d.html',''); init
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_button_and_l_e_d-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ButtonAndLED Class Reference</div></div>
@@ -123,6 +124,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adc4af37ef234eb7b7b9d745547cd2187"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_and_l_e_d.html#adc4af37ef234eb7b7b9d745547cd2187">getBtnState</a> ()</td></tr>
 <tr class="memdesc:adc4af37ef234eb7b7b9d745547cd2187"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get button state.  <br /></td></tr>
 <tr class="separator:adc4af37ef234eb7b7b9d745547cd2187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c011955c9646fdff49ce9ac67877e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_and_l_e_d.html#a65c011955c9646fdff49ce9ac67877e9">ledFading</a> (uint32_t _delay)</td></tr>
+<tr class="memdesc:a65c011955c9646fdff49ce9ac67877e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to tell breakout to fade LED with the delay passed in the function.  <br /></td></tr>
+<tr class="separator:a65c011955c9646fdff49ce9ac67877e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c2f4834e48c9e17551153d2e5bd0ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_and_l_e_d.html#ab0c2f4834e48c9e17551153d2e5bd0ce">turnLedOnAndHold</a> (uint32_t _time)</td></tr>
+<tr class="memdesc:ab0c2f4834e48c9e17551153d2e5bd0ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to tell breakout to turn led on and hold that state some _time and then turn it off.  <br /></td></tr>
+<tr class="separator:ab0c2f4834e48c9e17551153d2e5bd0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_easy_c"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_easy_c')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_easy_c.html">EasyC</a></td></tr>
 <tr class="memitem:a2ea672a225a32eab52c2b20733fd26bd inherit pub_methods_class_easy_c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_easy_c.html#a2ea672a225a32eab52c2b20733fd26bd">EasyC</a> ()</td></tr>
 <tr class="memdesc:a2ea672a225a32eab52c2b20733fd26bd inherit pub_methods_class_easy_c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main constructor for easyC version.  <br /></td></tr>
@@ -154,12 +161,16 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a337feea50e80de2c35951d1628b3b2ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded function for virtual in base class to initialize sensor specific.  <br /></td></tr>
 <tr class="separator:a337feea50e80de2c35951d1628b3b2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a21c9b3c336d4799f4534b4d5433db84b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_and_l_e_d.html#a21c9b3c336d4799f4534b4d5433db84b">sendValues</a> (uint8_t _mode, uint32_t _parameter)</td></tr>
+<tr class="memdesc:a21c9b3c336d4799f4534b4d5433db84b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to send data to the breakout.  <br /></td></tr>
+<tr class="separator:a21c9b3c336d4799f4534b4d5433db84b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a5fffe9943b5b0b30b466146e32250bc5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_and_l_e_d.html#a5fffe9943b5b0b30b466146e32250bc5">pin</a></td></tr>
 <tr class="separator:a5fffe9943b5b0b30b466146e32250bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad689b1a667590a738d0e046256be12ee"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_and_l_e_d.html#ad689b1a667590a738d0e046256be12ee">pwm</a> = 128</td></tr>
-<tr class="separator:ad689b1a667590a738d0e046256be12ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -212,7 +223,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Function to get button state. </p>
-<dl class="section return"><dt>Returns</dt><dd>1 if the button is pressed, 0 if not. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 or BUTTON_IDLE constant if the button is not pressed. 1 or BTN_CLICK constant if the button is pressed once. 2 or BTN_DOUBLE_CLICK constant is the button is pressed twice. 3 or BTN_LONG_PRESS constant if the button is long pressed. 4 or BTN_LONG_RELEASE constant when the button is released after a long press. </dd></dl>
 
 </div>
 </div>
@@ -242,6 +253,32 @@ Additional Inherited Members</h2></td></tr>
 <p>Overloaded function for virtual in base class to initialize sensor specific. </p>
 
 <p>Implements <a class="el" href="class_easy_c.html#a48c8aa55d48ef0cc11047cab0735c998">EasyC</a>.</p>
+
+</div>
+</div>
+<a id="a65c011955c9646fdff49ce9ac67877e9" name="a65c011955c9646fdff49ce9ac67877e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65c011955c9646fdff49ce9ac67877e9">&#9670;&#160;</a></span>ledFading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ButtonAndLED::ledFading </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_delay</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to tell breakout to fade LED with the delay passed in the function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uint32_t</td><td>_delay The delay between increasing and decreasing the PWM steps. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -309,6 +346,77 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a21c9b3c336d4799f4534b4d5433db84b" name="a21c9b3c336d4799f4534b4d5433db84b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21c9b3c336d4799f4534b4d5433db84b">&#9670;&#160;</a></span>sendValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ButtonAndLED::sendValues </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_parameter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to send data to the breakout. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uint8_t</td><td>_mode Breakout mode: 0 or LED_OFF 1 or LED_ON 2 or LED_PWM 3 or LED_FADING 4 or LED_ON_AND_HOLD</td></tr>
+    <tr><td class="paramname">uint32_t</td><td>_parameter Some modes need parameters and this is that parameter. Usually delay in milliseconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab0c2f4834e48c9e17551153d2e5bd0ce" name="ab0c2f4834e48c9e17551153d2e5bd0ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0c2f4834e48c9e17551153d2e5bd0ce">&#9670;&#160;</a></span>turnLedOnAndHold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ButtonAndLED::turnLedOnAndHold </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to tell breakout to turn led on and hold that state some _time and then turn it off. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uint32_t</td><td>_time A time that holds the LED on. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a5fffe9943b5b0b30b466146e32250bc5" name="a5fffe9943b5b0b30b466146e32250bc5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5fffe9943b5b0b30b466146e32250bc5">&#9670;&#160;</a></span>pin</h2>
@@ -332,28 +440,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ad689b1a667590a738d0e046256be12ee" name="ad689b1a667590a738d0e046256be12ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad689b1a667590a738d0e046256be12ee">&#9670;&#160;</a></span>pwm</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">byte ButtonAndLED::pwm = 128</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_button-and-_l_e_d-easy_c-_s_o_l_d_e_r_e_d_8h_source.html">Button-and-LED-easyC-SOLDERED.h</a></li>
 <li><a class="el" href="_button-and-_l_e_d-easy_c-_s_o_l_d_e_r_e_d_8cpp.html">Button-and-LED-easyC-SOLDERED.cpp</a></li>
@@ -366,7 +452,7 @@ Additional Inherited Members</h2></td></tr>
     <ul>
         <li class="navelem"><a class="el" href="class_button_and_l_e_d.html">ButtonAndLED</a></li>
         <li class="footer">
-            Generated on Tue Apr 4 2023 10:45:03 for Button &amp; LED board easyC arduino library by <a href="http://www.doxygen.org/index.html">
+            Generated on Sat Apr 8 2023 11:36:47 for Button &amp; LED board easyC arduino library by <a href="http://www.doxygen.org/index.html">
                 <img class="footer" src="doxygen.png" alt="doxygen"
                     onerror="this.onerror=null;this.src='doxygen.svg';" /></a> 1.9.6.
             Dark theme by <a href="http://majerle.eu" target="_new">Tilen Majerle</a>. All rights reserved.
