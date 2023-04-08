@@ -28,6 +28,7 @@ void setup()
     // Init serial communication
     Serial.begin(115200);
 
+    // Initialize Button & LED board
     // Start I2C communication on default address (0x30)
     myBtnLed.begin();
 
@@ -53,19 +54,19 @@ void loop()
         switch (state)
         {
         case BTN_CLICK:
-            // The button is pressed once
+            // The button is pressed once, print it on the Serial Monitor
             Serial.println("Button single click");
             break;
         case BTN_DOUBLE_CLICK:
-            // The button is double-pressed
+            // The button is double-pressed, print it on the Serial Monitor
             Serial.println("Button double click");
             break;
         case BTN_LONG_PRESS:
-            // The button is long pressed
+            // The button is long pressed, print it on the Serial Monitor
             Serial.println("Button long click");
             break;
         case BTN_LONG_RELEASE:
-            // When the long-pressed button is released
+            // When the long-pressed button is released, print it on the Serial Monitor
             Serial.println("Button long click release");
             break;
         }

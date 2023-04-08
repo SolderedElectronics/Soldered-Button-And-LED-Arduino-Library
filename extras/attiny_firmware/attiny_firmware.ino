@@ -19,12 +19,27 @@ int addr = DEFAULT_ADDRESS; // 0x30
 #define BTN_PIN PA2
 #define LED_PIN PA5
 
+// Define all modes of LED
+#define LED_OFF         0
+#define LED_ON          1
+#define LED_PWM         2
+#define LED_FADING      3
+#define LED_ON_AND_HOLD 4
+
 // Setup a OneButton on pin PA2
 OneButton button(BTN_PIN, true);
 
-// Variables for  
-byte data[2];
+// Variables for mode, parameter, and button state
+uint8_t mode;
+uint32_t parameter;
 byte buttonState;
+
+// Variables for keeping tracking time
+uint32_t timeOn, lastTimeChanged;
+
+// Index for fading LED and flag which tells increasing or decreasing that index
+int i;
+bool increase = 1;
 
 void setup()
 {
@@ -52,33 +67,75 @@ void loop()
     // Keep watching the push button
     button.tick();
 
-    if (data[0] == 0)
+    // See which mode is currently and do what need for each mode
+    switch (mode)
     {
-        // Want to turn off LED
+    case LED_OFF: // Want to turn off LED
         digitalWrite(LED_PIN, LOW);
-    }
+        break;
 
-    if (data[0] == 1)
-    {
-        // Want to turn on LED
+    case LED_ON: // Want to turn on LED
         digitalWrite(LED_PIN, HIGH);
-    }
+        break;
 
-    if (data[0] == 2)
-    {
-        // Want to turn on LED, but with PWM
-        analogWrite(LED_PIN, data[1]);
+    case LED_PWM: // Want to turn on LED, but with PWM
+        analogWrite(LED_PIN, (uint8_t)parameter);
+        break;
+
+    case LED_FADING: // Want to fade the LED
+        // Write the current PWM to the LED
+        analogWrite(LED_PIN, i);
+
+        // Change the index at a certain time and change it depending on increase flag
+        if (millis() - lastTimeChanged > parameter)
+        {
+            // Remember the time when the index changed
+            lastTimeChanged = millis();
+
+            // Change index depending on the flag
+            if (increase)
+                i++;
+            else
+                i--;
+
+            // When the index reaches 255 or 0, change changing direction
+            if (i > 255 || i < 0)
+                increase = !increase;
+        }
+        break;
+
+    case LED_ON_AND_HOLD: // Want to keep LED on a certain time and then turns it off
+        // If it's passed time that the LED needs to be on, turn it off
+        if (millis() - timeOn > parameter)
+        {
+            digitalWrite(LED_PIN, LOW);
+        }
+        break;
     }
 }
 
 // When the breakout receives the data over I2C, this function is executing
 void receiveEvent(int howMany)
 {
-    // We receive 2 bytes, the first is to select mode, and the second is the PWM value if needed
+    // We receive 5 bytes, the first is to select mode, and the other 4 is its value if it's needed
 
-    if (Wire.available() == 2)
+    if (Wire.available() == 5)
     {
-        Wire.readBytes(data, 2);
+        // Read the mode
+        mode = Wire.read();
+
+        // If the mode is that it's needed to turn led off after some time, remember currect time and set flag to turn
+        // led on
+        if (mode == LED_ON_AND_HOLD)
+        {
+            timeOn = millis();
+            digitalWrite(LED_PIN, HIGH);
+        }
+
+        // Read the raw parameter (4 bytes) and convert it to uint32_t
+        uint8_t parameterRaw[4];
+        Wire.readBytes(parameterRaw, 4);
+        parameter = *(uint32_t *)parameterRaw;
     }
 }
 
@@ -101,7 +158,6 @@ void doubleclick1()
 {
     buttonState = 2;
 }
-
 
 // This function will be called often, while the button is pressed for a long time
 void longPress1()
