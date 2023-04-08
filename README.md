@@ -39,7 +39,7 @@ At Soldered, we design and manufacture a wide selection of electronic products t
 - [Tutorials & Projects](https://soldered.com/learn)
 - [Community & Technical support](https://soldered.com/community)
 
-### Original source
+### Used libraries
 ​
 This library is possible thanks to [OneButton ](https://github.com/mathertel/OneButton) library. Thank you, mathertel.
 
