@@ -36,7 +36,7 @@ class ButtonAndLED : public EasyC
     void ledOn();
     void ledOn(byte pwmValue);
     void ledOff();
-    byte getBtnState();
+    char getBtnState();
     void ledFading(uint32_t _delay);
     void turnLedOnAndHold(uint32_t _time);
 
