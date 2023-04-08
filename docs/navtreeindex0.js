@@ -12,7 +12,7 @@ var NAVTREEINDEX0 =
 "class_button_and_l_e_d.html#a65c011955c9646fdff49ce9ac67877e9":[1,0,0,3],
 "class_button_and_l_e_d.html#a7a7e572e97bb70c3fe1a2abeccfef3fc":[1,0,0,5],
 "class_button_and_l_e_d.html#ab0c2f4834e48c9e17551153d2e5bd0ce":[1,0,0,8],
-"class_button_and_l_e_d.html#adc4af37ef234eb7b7b9d745547cd2187":[1,0,0,1],
+"class_button_and_l_e_d.html#ab53ac671aa50aa8b2d3e90574b848eaf":[1,0,0,1],
 "class_button_and_l_e_d.html#ae6577c71d6b27b2d5e1fb0b814881a61":[1,0,0,4],
 "class_button_and_l_e_d.html#af7951ad784e0179554b4f0580857ba27":[1,0,0,6],
 "class_easy_c.html":[1,0,1],
