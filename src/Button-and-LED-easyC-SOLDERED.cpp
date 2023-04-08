@@ -71,9 +71,9 @@ void ButtonAndLED::ledOff()
  *                          3 or BTN_LONG_PRESS constant if the button is long pressed.
  *                          4 or BTN_LONG_RELEASE constant when the button is released after a long press.
  */
-byte ButtonAndLED::getBtnState()
+char ButtonAndLED::getBtnState()
 {
-    byte btn;
+    char btn;
     readData(&btn, 1);
 
     return btn;
